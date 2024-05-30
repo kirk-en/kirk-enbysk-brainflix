@@ -1,4 +1,4 @@
-import './VideoInfo.scss'
+import "./VideoInfo.scss";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
@@ -7,16 +7,23 @@ const VideoInfo = () => {
     <section className="vid-info">
       <h1 className="vid-info__title">Video Title</h1>
       <div className="vid-info__details">
-        <span className="vid-info__author">By Insert Name</span>
-        <span className="vid-info__subtitle">{ new Date().toLocaleDateString() }</span>
-        <div className="vid-info__count-container">
-          <img className="vid-info__icon" src={viewsIcon} alt="eye icon" />
-          <span className="vid-info__subtitle">980,837</span>
-        </div>
-        <div className="vid-info__count-container">
-          <img className="vid-info__icon" src={likesIcon} alt="heart icon" />
-          <span className="vid-info__subtitle">22,479</span>
-        </div>
+        <article className="vid-info__details-group">
+          <span className="vid-info__author">By Insert Name</span>
+          <span className="vid-info__subtitle">
+            {new Date().toLocaleDateString()}
+          </span>
+        </article>
+
+        <article className="vid-info__details-group vid-info__details-group--right">
+          <div className="vid-info__count-container">
+            <img className="vid-info__icon" src={viewsIcon} alt="eye icon" />
+            <span className="vid-info__subtitle">980,837</span>
+          </div>
+          <div className="vid-info__count-container">
+            <img className="vid-info__icon" src={likesIcon} alt="heart icon" />
+            <span className="vid-info__subtitle">22,479</span>
+          </div>
+        </article>
       </div>
       <p>
         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Deleniti

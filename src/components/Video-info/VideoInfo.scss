@@ -7,4 +7,12 @@
     display: flex;
     justify-content: space-between;
   }
+  &__details-group {
+    width: 50vw;
+    display: flex;
+    justify-content: flex-start;
+    &--right {
+      justify-content: flex-end;
+    }
+  }
 }
