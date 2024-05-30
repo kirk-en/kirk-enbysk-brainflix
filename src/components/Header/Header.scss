@@ -5,12 +5,18 @@
 
 .header {
 display: flex;
-justify-content: flex-end;
-
+justify-content: space-between;
+padding: 2rem 0;
+  &__right-controls {
+    display: flex;
+    align-items: center;
+  }
   &__profile-image {
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
   }
-  &__
+  &__logo {
+width: 7.5rem
+  }
 }

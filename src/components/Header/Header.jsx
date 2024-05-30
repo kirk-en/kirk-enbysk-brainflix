@@ -6,10 +6,11 @@ const Header = () => {
   return (
     <header className='header'>
       <img className='header__logo' src={logo} alt="brainflix logo" />
-      <p>some text</p>
-      <input className='header__input'></input>
-      <button>Upload</button>
-      <img className='header__profile-image' src={profileImage} alt="user profile image" />
+      <section className="header__right-controls">
+        <input className='header__input'></input>
+        <button>Upload</button>
+        <img className='header__profile-image' src={profileImage} alt="user profile image" />
+      </section>
     </header>
   )
 };
