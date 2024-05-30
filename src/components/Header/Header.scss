@@ -1,0 +1,16 @@
+@use "../../styles/partials/typography.scss";
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+@use "../../styles/partials/global.scss";
+
+.header {
+display: flex;
+justify-content: flex-end;
+
+  &__profile-image {
+    border-radius: 50%;
+    width: 2.25rem;
+    height: 2.25rem;
+  }
+  &__
+}
