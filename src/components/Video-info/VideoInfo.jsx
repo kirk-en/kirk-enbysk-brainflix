@@ -1,3 +1,4 @@
+import './VideoInfo.scss'
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
@@ -7,7 +8,7 @@ const VideoInfo = () => {
       <h1 className="vid-info__title">Video Title</h1>
       <div className="vid-info__details">
         <span className="vid-info__author">By Insert Name</span>
-        <span className="vid-info__subtitle">09/18/2023</span>
+        <span className="vid-info__subtitle">{ new Date().toLocaleDateString() }</span>
         <div className="vid-info__count-container">
           <img className="vid-info__icon" src={viewsIcon} alt="eye icon" />
           <span className="vid-info__subtitle">980,837</span>

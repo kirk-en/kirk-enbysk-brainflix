@@ -1,2 +1,10 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
+
+.vid-info {
+
+  &__details {
+    display: flex;
+    justify-content: space-between;
+  }
+}
