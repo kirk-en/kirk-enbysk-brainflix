@@ -19,7 +19,7 @@ function App() {
       <Video video = {video} />
       <VideoInfo video = {video} />
       < CommentsContainer video = {video}/>
-      <VideoList videosData = {videosData} setVideo = {setVideo} />
+      <VideoList videosData = {videosData} setVideo = {setVideo} currentVideoId = {video.id}/>
     </>
   );
 }

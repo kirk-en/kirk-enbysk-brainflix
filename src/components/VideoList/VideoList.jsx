@@ -1,19 +1,19 @@
 import "./VideoList.scss";
 import VideoListItem from "../VideoListItem/VideoListItem";
 
-const VideoList = ({ videosData, setVideo }) => {
-
+const VideoList = ({ videosData, setVideo, currentVideoId }) => {
 
   return (
     <>
     <aside className="video-list">
       <h2 className="video-list__title">next videos</h2>
         <ul className="video-list__list">
-          {videosData.map((video) => {
-            return <VideoListItem
-            video = {video}
+          {videosData.map((vItem) => {
+            return !(vItem.id == currentVideoId) &&
+            <VideoListItem
+            vItem = {vItem}
             setVideo = {setVideo}
-            key = {video.id}
+            key = {vItem.id}
             />
           })}
         </ul>
