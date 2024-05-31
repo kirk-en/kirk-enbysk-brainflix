@@ -1,0 +1,13 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.video-list {
+  &__title {
+    font-weight: 400;
+    text-transform: uppercase;
+
+  }
+  &__list {
+    
+  }
+}

@@ -1,0 +1,17 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.list-item {
+  display: flex;
+  padding: 0.5rem;
+  &__img {
+    width: 8rem;
+    border-radius: 0.5rem;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0 .5rem;
+  }
+}
