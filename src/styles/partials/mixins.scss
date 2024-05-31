@@ -1,3 +1,4 @@
+@use "../../styles/partials/variables.scss" as *;
 
 
 @mixin tablet {
@@ -9,4 +10,16 @@
   @media (min-width: 1280px) {
     @content;
   }
+}
+@mixin btn-styling($fontsz, $padding) {
+  font-size: $fontsz;
+  color: $primary-light;
+  background-color: $primary-dark;
+  width: 100%;
+  color: $primary-light;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: 8px;
+  padding: $padding;
+  border: none;
 }

@@ -3,10 +3,11 @@ import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
 const VideoInfo = ({video}) => {
-  // console.log(video)
+
   return (
     <section className="vid-info">
       <h1 className="vid-info__title">{video.title}</h1>
+      <div className="divide-line divide-line--pad"></div>
       <div className="vid-info__details">
         <article className="vid-info__details-group">
           <span className="vid-info__author">By {video.channel}</span>
@@ -26,6 +27,7 @@ const VideoInfo = ({video}) => {
           </div>
         </article>
       </div>
+      <div className="divide-line divide-line--pad"></div>
       <p>
         {video.description}
       </p>

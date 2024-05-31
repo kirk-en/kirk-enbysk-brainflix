@@ -1,7 +1,7 @@
-@use "../partials/typography";
-@use "../partials/resets";
-@use "../partials/variables" as *;
-@use "../partials/mixins" as *;
+@use "./typography";
+@use "./resets";
+@use "./variables" as *;
+@use "./mixins" as *;
 
 body {
   font-family: Avenir-local, Arial, Helvetica, sans-serif;

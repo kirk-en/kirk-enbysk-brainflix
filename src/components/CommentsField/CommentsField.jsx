@@ -14,14 +14,12 @@ const CommentsField = () => {
           <form className="comments__form">
             <label className="comments__label">
               <span className="comments__text">join the conversation</span>
-              <input
-                className="comments__field"
-                type="text"
-                name="name"
-                placeholder="Enter your name"
-                autoComplete="off"
+              <textarea
+                className="comments__field comments__field--no-resize"
+                name="comment"
+                placeholder="Add a new comment"
                 required
-              />
+              ></textarea>
             </label>
             <button type="submit" className="comments__btn">
               comment

@@ -9,10 +9,6 @@
   @include desktop {
     padding: 0 25% 2rem;
   }
-
-  &__DOM-entry {
-    padding: 0 1rem;
-  }
   &__title {
     padding: 0 1rem;
     color: $primary-dark;
@@ -89,7 +85,7 @@
     }
   }
   &__btn {
-    // @include btn-styling(1.5rem, 1rem);
+    @include btn-styling(1.5rem, 1rem);
     margin: 1rem 0;
     font-family: Avenir-local, Arial, Helvetica, sans-serif;
     @include tablet {
