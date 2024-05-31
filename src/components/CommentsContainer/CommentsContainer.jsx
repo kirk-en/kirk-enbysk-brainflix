@@ -1,12 +1,13 @@
 import './CommentsContainer.scss'
 import CommentsField from '../CommentsField/CommentsField';
+import CommentsList from '../CommentsList/CommentsList';
 
-const CommentsContainer = () => {
+const CommentsContainer = ({ video }) => {
 
   return (
 <>
 <CommentsField />
-{/* <CommentsList /> */}
+<CommentsList video = {video}/>
 </>
 
   )

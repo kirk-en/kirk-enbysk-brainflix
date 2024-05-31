@@ -16,10 +16,10 @@ function App() {
   return (
     <>
       <Header />
-      <Video video={video} />
-      <VideoInfo video={video} />
-      < CommentsContainer />
-      <VideoList videosData={videosData} setVideo={setVideo} />
+      <Video video = {video} />
+      <VideoInfo video = {video} />
+      < CommentsContainer video = {video}/>
+      <VideoList videosData = {videosData} setVideo = {setVideo} />
     </>
   );
 }

@@ -6,3 +6,17 @@
 body {
   font-family: Avenir-local, Arial, Helvetica, sans-serif;
 }
+
+// divide lines
+.divide-line {
+  border-bottom: 0.125rem solid $alt-mid;
+  margin: 1rem 0;
+  width: 100%;
+  &--pad {
+    width: 97%;
+    margin: 1rem auto;
+  }
+  &--shows-sec {
+    margin: 0;
+  }
+}
