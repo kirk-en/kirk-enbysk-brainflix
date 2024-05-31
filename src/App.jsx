@@ -1,15 +1,23 @@
 import { useState } from "react";
 import "./App.scss";
+import videosData from "./data/video-details.json";
+
 import Header from "./components/Header/Header";
-import Video from './components/Video/Video';
-import VideoInfo from "./components/Video-info/VideoInfo";
+import Video from "./components/Video/Video";
+import VideoInfo from "./components/VideoInfo/VideoInfo";
+import VideoList from "./components/VideoList/VideoList";
+
+console.log(videosData);
 
 function App() {
+  const [video, setVideo] = useState(videosData[0]);
+
   return (
     <>
       <Header />
-      <Video />
-<VideoInfo />
+      <Video video={video} />
+      <VideoInfo video={video} />
+      <VideoList videosData={videosData} setVideo={setVideo} />
     </>
   );
 }

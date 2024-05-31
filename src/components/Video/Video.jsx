@@ -1,10 +1,10 @@
-import poster from '../../assets/images/Upload-video-preview.jpg'
+// import poster from '../../assets/images/Upload-video-preview.jpg'
 import './Video.scss'
 
-const Video = () => {
+const Video = ({video}) => {
   return (
     <>
-      <video controls src="" poster={poster} className='video'></video>
+      <video controls src={video.video} poster={video.image} className='video'></video>
     </>
   );
 };
