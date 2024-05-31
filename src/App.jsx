@@ -6,6 +6,7 @@ import Header from "./components/Header/Header";
 import Video from "./components/Video/Video";
 import VideoInfo from "./components/VideoInfo/VideoInfo";
 import VideoList from "./components/VideoList/VideoList";
+import CommentsContainer from "./components/CommentsContainer/CommentsContainer";
 
 console.log(videosData);
 
@@ -17,6 +18,7 @@ function App() {
       <Header />
       <Video video={video} />
       <VideoInfo video={video} />
+      < CommentsContainer />
       <VideoList videosData={videosData} setVideo={setVideo} />
     </>
   );

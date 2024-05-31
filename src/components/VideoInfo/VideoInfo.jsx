@@ -29,6 +29,7 @@ const VideoInfo = ({video}) => {
       <p>
         {video.description}
       </p>
+      <p>{video.comments.length} Comments</p>
     </section>
   );
 };
