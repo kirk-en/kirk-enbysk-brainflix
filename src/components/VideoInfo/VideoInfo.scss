@@ -2,7 +2,13 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .vid-info {
-
+  @include section-padding;
+  &__title {
+    font-size: 1.5rem;
+    line-height: 2rem;
+    font-weight: 700;
+    padding: 2rem 0 1rem;
+  }
   &__details {
     display: flex;
     justify-content: space-between;
@@ -10,9 +16,39 @@
   &__details-group {
     width: 50vw;
     display: flex;
+    flex-direction: column;
     justify-content: flex-start;
     &--right {
       justify-content: flex-end;
     }
+  }
+  // styling to apply to each detail item (alignment).
+  &__details-item {
+    &:nth-child(odd) {
+      padding: 1rem 0;
+    }
+    &:nth-child(even) {
+      padding: 0 0 1rem;
+    }
+  }
+  // styling unique to individual detail items.
+  &__author {
+    font-weight: 600;
+  }
+  &__subtitle {
+    color: $primary-mid;
+    &--w-icon {
+      margin-left: 0.5rem;
+    }
+  }
+  //Video Description and comment count
+  &__description {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-weight: 400;
+    padding: 1rem 0;
+  }
+  &__comment-count {
+    font-weight: 600;
   }
 }

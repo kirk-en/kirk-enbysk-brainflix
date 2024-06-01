@@ -2,16 +2,16 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .header {
+  @include section-padding;
   &__right-controls {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
   }
   &__input {
-    @include input-styling(calc(100% - 3.25rem), 1.5rem);
     background: url(../../assets/icons/search.svg) no-repeat .5rem .75rem;
     background-size: 1.25rem;
-    background-color: $alt-light;
+    @include input-styling(calc(100% - 3.25rem), 1.5rem);
     @include tablet {
     background-position: .5rem 1rem;
     }
@@ -24,7 +24,7 @@
     margin-left: 1rem;
   }
 &__btn {
-  @include btn-styling(1.5rem, 1rem);
+  @include btn-styling(1.25rem, 1rem);
   position: relative;
   margin: 1.5rem 0;
 }

@@ -10,28 +10,28 @@ const VideoInfo = ({video}) => {
       <div className="divide-line"></div>
       <div className="vid-info__details">
         <article className="vid-info__details-group">
-          <span className="vid-info__author">By {video.channel}</span>
-          <span className="vid-info__subtitle">
+          <span className="vid-info__author vid-info__details-item">By {video.channel}</span>
+          <span className="vid-info__subtitle vid-info__details-item">
             {new Date(video.timestamp).toLocaleDateString()}
           </span>
         </article>
 
         <article className="vid-info__details-group vid-info__details-group--right">
-          <div className="vid-info__count-container">
+          <div className="vid-info__count-container vid-info__details-item">
             <img className="vid-info__icon" src={viewsIcon} alt="eye icon" />
-            <span className="vid-info__subtitle">{video.views}</span>
+            <span className="vid-info__subtitle vid-info__subtitle--w-icon">{video.views}</span>
           </div>
-          <div className="vid-info__count-container">
+          <div className="vid-info__count-container vid-info__details-item">
             <img className="vid-info__icon" src={likesIcon} alt="heart icon" />
-            <span className="vid-info__subtitle">{video.likes}</span>
+            <span className="vid-info__subtitle vid-info__subtitle--w-icon">{video.likes}</span>
           </div>
         </article>
       </div>
       <div className="divide-line"></div>
-      <p>
+      <p className="vid-info__description">
         {video.description}
       </p>
-      <p>{video.comments.length} Comments</p>
+      <p className="vid-info__comment-count">{video.comments.length} Comments</p>
     </section>
   );
 };
