@@ -3,15 +3,19 @@
 
 .list-item {
   display: flex;
-  padding: 0.5rem 0 0;
+  padding: 1rem 0 0;
   &__img {
-    width: 8rem;
+    width: 30vw;
+    max-width: 10rem;
     border-radius: 0.5rem;
   }
   &__info {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    padding: 0 .5rem;
+    padding: 0 1rem;
+  }
+  &__title {
+    font-weight: 600;
   }
 }

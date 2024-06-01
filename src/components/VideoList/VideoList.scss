@@ -4,11 +4,13 @@
 .video-list {
   @include section-padding;
   &__title {
-    font-weight: 400;
+    font-weight: 600;
     text-transform: uppercase;
-
+    color: $primary-mid;
+    font-size: 1rem;
+    padding: 1.5rem 0 .5rem;
   }
   &__list {
-    
+    padding-bottom: 3rem;
   }
 }
