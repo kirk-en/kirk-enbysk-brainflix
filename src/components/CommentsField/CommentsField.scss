@@ -86,6 +86,7 @@
   }
   &__btn {
     @include btn-styling(1.5rem, 1rem);
+    position: relative;
     margin: 1rem 0;
     font-family: Avenir-local, Arial, Helvetica, sans-serif;
     @include tablet {
@@ -94,8 +95,13 @@
       align-self: flex-end;
     }
     &:hover {
-      background-color: $alt-dark;
+      background-color: $alt-color;
     }
+  }
+  &__icon {
+    position: absolute;
+    left: 3%;
+    border: solid 2px lime;
   }
   &__content-container {
     flex-grow: 1;

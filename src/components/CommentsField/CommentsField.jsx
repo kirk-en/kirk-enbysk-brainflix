@@ -1,5 +1,6 @@
 import "./CommentsField.scss";
 import profileImage from '../../assets/images/Mohan-muruge.jpg'
+import icon from '../../assets/icons/add_comment.svg'
 
 const CommentsField = () => {
   return (
@@ -22,12 +23,13 @@ const CommentsField = () => {
               ></textarea>
             </label>
             <button type="submit" className="comments__btn">
+              <img className="comments__icon" src={icon} alt="leave comment icon" />
               comment
             </button>
           </form>
         </div>
       </section>
-      <div className="divide-line divide-line--pad"></div>
+      <div className="divide-line"></div>
     </>
   );
 };

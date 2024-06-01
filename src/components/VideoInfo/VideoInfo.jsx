@@ -7,7 +7,7 @@ const VideoInfo = ({video}) => {
   return (
     <section className="vid-info">
       <h1 className="vid-info__title">{video.title}</h1>
-      <div className="divide-line divide-line--pad"></div>
+      <div className="divide-line"></div>
       <div className="vid-info__details">
         <article className="vid-info__details-group">
           <span className="vid-info__author">By {video.channel}</span>
@@ -27,7 +27,7 @@ const VideoInfo = ({video}) => {
           </div>
         </article>
       </div>
-      <div className="divide-line divide-line--pad"></div>
+      <div className="divide-line"></div>
       <p>
         {video.description}
       </p>
