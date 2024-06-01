@@ -22,4 +22,29 @@
   border-radius: 8px;
   padding: $padding;
   border: none;
+  &:hover {
+    background-color: $alt-color;
+  }
+}
+@mixin btn-icon {
+  position: absolute;
+  left: 3%;
+  // top: 1rem;
+  width: 2rem;
+  // border: solid 2px lime;
+}
+
+@mixin input-styling($width, $indent) {
+  border-radius: 0.25rem;
+  width: $width;
+  min-height: 2.25rem;
+  font-family: Avenir-local, Arial, Helvetica, sans-serif;
+  border: 1px solid $alt-mid;
+  background-color: $alt-light;
+  font-size: 1rem;
+  text-indent: $indent;
+  padding: .75rem;
+  @include tablet {
+    padding: 1rem;
+  }
 }

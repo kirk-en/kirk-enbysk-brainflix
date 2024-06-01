@@ -2,19 +2,42 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .header {
-display: flex;
-justify-content: space-between;
-padding: 2rem 0;
+  padding: 1rem 0;
   &__right-controls {
     display: flex;
     align-items: center;
+    flex-wrap: wrap;
+  }
+  &__input {
+    @include input-styling(calc(100% - 3.25rem), 1.5rem);
+    background: url(../../assets/icons/search.svg) no-repeat .5rem .75rem;
+    background-size: 1.25rem;
+    @include tablet {
+    background-position: .5rem 1rem;
+    }
+
   }
   &__profile-image {
     border-radius: 50%;
     width: 2.25rem;
     height: 2.25rem;
+    margin-left: 1rem;
+  }
+&__btn {
+  @include btn-styling(1.5rem, 1rem);
+  position: relative;
+}
+
+  &__logo-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
   &__logo {
-width: 7.5rem
+    width: 7.5rem;
+
+  }
+  &__icon{
+   @include btn-icon
   }
 }
