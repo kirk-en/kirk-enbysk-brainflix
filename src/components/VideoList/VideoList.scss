@@ -2,6 +2,7 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .video-list {
+  @include section-padding;
   &__title {
     font-weight: 400;
     text-transform: uppercase;

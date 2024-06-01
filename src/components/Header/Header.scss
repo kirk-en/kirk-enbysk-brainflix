@@ -24,7 +24,7 @@
     margin-left: 1rem;
   }
 &__btn {
-  @include btn-styling(1.25rem, 1rem);
+  @include btn-styling(1rem, 1rem);
   position: relative;
   margin: 1.5rem 0;
 }

@@ -5,10 +5,10 @@ import CommentsList from '../CommentsList/CommentsList';
 const CommentsContainer = ({ video }) => {
 
   return (
-<>
+<div className='comments-container'>
 <CommentsField />
 <CommentsList video = {video}/>
-</>
+</div>
 
   )
 }

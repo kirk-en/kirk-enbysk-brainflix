@@ -1,0 +1,122 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+.comments-container {
+  @include section-padding;
+  padding-top: 1rem;
+}
+
+.comments {
+  color: $primary-dark;
+  @include tablet {
+    padding: 0 10rem 2rem;
+  }
+  @include desktop {
+    padding: 0 25% 2rem;
+  }
+  &__title {
+    padding: 0 1rem;
+    color: $primary-dark;
+    font-size: 2rem;
+    font-weight: 600;
+    @include tablet {
+      margin: 3.5rem 0 2.25rem;
+      padding: 0 2.25rem;
+    }
+    @include desktop {
+      padding: 0 5rem;
+    }
+  }
+  &__posted-comment-container {
+    padding: 1rem 0;
+  }
+  &__flex {
+    display: flex;
+    justify-content: space-between;
+    &--post-info {
+      padding: 0;
+    }
+  }
+  &__profile-image {
+    height: 100%;
+    display: block;
+    width: 3.25rem;
+    height: 3.25rem;
+    margin: 2.4rem 0;
+    border-radius: 50%;
+    background-color: $alt-mid;
+    &--posted {
+      margin: 0;
+      flex-shrink: 0;
+    }
+  }
+  &__form {
+    padding: 0 0 0 2rem;
+    flex-grow: 1;
+    @include tablet {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+  &__label {
+    text-transform: uppercase;
+    display: block;
+    padding: 0.5rem 0;
+    color: $primary-mid;
+  }
+  &__text {
+    display: block;
+    padding: 0.5rem 0;
+    font-weight: 600;
+  }
+  &__field {
+    display: block;
+    @include input-styling(100%, 0.25rem);
+
+    &:focus {
+      border: 1px solid $primary-dark;
+    }
+    &:user-invalid {
+      border: 1px solid $error-color;
+    }
+
+    &--no-resize {
+      resize: none;
+      min-height: 8rem;
+    }
+  }
+  &__btn {
+    @include btn-styling(1rem, 1rem);
+    position: relative;
+    margin: 1rem 0;
+    font-family: Avenir-local, Arial, Helvetica, sans-serif;
+    @include tablet {
+      width: 40%;
+      font-size: 1rem;
+      align-self: flex-end;
+    }
+    &:hover {
+      background-color: $alt-color;
+    }
+  }
+  &__icon {
+    @include btn-icon;
+  }
+  &__content-container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 0 0 2rem;
+  }
+  &__name {
+    font-weight: 600;
+  }
+  &__date {
+    color: $primary-mid;
+  }
+  &__content {
+    padding-top: 1rem;
+    line-height: 1.5rem;
+    hyphens: auto;
+  }
+}
