@@ -17,4 +17,10 @@ body {
   &--shows-sec {
     margin: 0;
   }
+  @include tablet {
+    // tablet+ views do not have a line below video title
+    &:first-of-type {
+      display: none;
+    }   
+  }
 }

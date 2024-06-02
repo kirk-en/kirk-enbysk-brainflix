@@ -3,36 +3,59 @@
 
 .header {
   @include section-padding;
+  @include tablet {
+    display: flex;
+    justify-content: space-between;
+  }
   &__right-controls {
     display: flex;
     align-items: center;
     flex-wrap: wrap;
+    @include tablet {
+      flex-wrap: nowrap;
+      flex-grow: 1;
+      justify-content: space-between;
+    }
   }
+  // Set profile image size here to scale together with search bar.
+  $profile-img-size: 3.25rem;
   &__input {
     background: url(../../assets/icons/search.svg) no-repeat .5rem .75rem;
     background-size: 1.25rem;
-    @include input-styling(calc(100% - 3.25rem), 1.5rem);
+    @include input-styling(calc(100% - ($profile-img-size + 1rem)), 1.5rem);
     @include tablet {
     background-position: .5rem 1rem;
+    @include input-styling(50%, 1.5rem)
     }
 
   }
   &__profile-image {
     border-radius: 50%;
-    width: 2.25rem;
-    height: 2.25rem;
+    width: $profile-img-size;
+    height: $profile-img-size;
     margin-left: 1rem;
+    @include tablet {
+      order: 4;
+    }
   }
 &__btn {
   @include btn-styling(1rem, 1rem);
   position: relative;
   margin: 1.5rem 0;
+  @include tablet {
+    width: 12rem;
+    margin: 1.5rem 0 1.5rem 1.5rem;
+  }
 }
 
   &__logo-container {
     width: 100%;
     display: flex;
     justify-content: center;
+    @include tablet {
+      width: 30%;
+      justify-content: flex-start;
+    }
   }
   &__logo {
     width: 7.5rem;

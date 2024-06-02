@@ -7,7 +7,11 @@
     font-size: 1.5rem;
     line-height: 2rem;
     font-weight: 700;
-    padding: 2rem 0 1rem;
+    padding: 1.5rem 0 1rem;
+    @include tablet {
+      font-size: 2rem;
+      padding: 2.25rem 0 1.5rem;
+    }
   }
   &__details {
     display: flex;
@@ -21,14 +25,24 @@
     &--right {
       justify-content: flex-end;
     }
+    @include tablet {
+      flex-direction: row;
+      padding: 1rem 0;
+    }
   }
   // styling to apply to each detail item (alignment).
   &__details-item {
     &:nth-child(odd) {
       padding: 1rem 0;
+      @include tablet {
+        padding: 0;
+      }
     }
     &:nth-child(even) {
       padding: 0 0 1rem;
+      @include tablet {
+        padding: 0 0 0 2rem ;
+      }
     }
   }
   // styling unique to individual detail items.
@@ -43,8 +57,8 @@
   }
   //Video Description and comment count
   &__description {
-    font-size: 0.8125rem;
-    line-height: 1.125rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 400;
     padding: 1rem 0;
   }
