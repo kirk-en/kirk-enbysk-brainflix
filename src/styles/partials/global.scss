@@ -11,16 +11,11 @@ body {
 .divide-line {
   border-bottom: 0.125rem solid $alt-mid;
   width: 100%;
-  &--pad {
-    width: 97%;
-  }
-  &--shows-sec {
-    margin: 0;
-  }
+  
+  // Hide line below video title outside mobile view.
+&--mobile {
   @include tablet {
-    // tablet+ views do not have a line below video title
-    &:first-of-type {
-      display: none;
-    }   
+    display: none;
   }
+}
 }

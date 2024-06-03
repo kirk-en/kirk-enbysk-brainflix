@@ -42,6 +42,11 @@
   left: 1rem;
   top: .75rem;
   width: 2rem;
+  @include tablet {
+    width: 1.5rem;
+    top: .85rem;
+    left: .5rem;
+  }
 }
 
 @mixin input-styling($width, $indent) {

@@ -4,6 +4,9 @@
 .list-item {
   display: flex;
   padding: 1rem 0 0;
+  @include tablet {
+    width: 25rem;
+  }
   &__img {
     width: 30vw;
     max-width: 10rem;
