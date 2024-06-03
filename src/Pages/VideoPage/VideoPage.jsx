@@ -1,14 +1,16 @@
 import "./VideoPage.scss";
 import { useState } from "react";
-import videosData from "./data/video-details.json";
+import videosData from "../../data/video-details.json";
 
-import Video from "./components/Video/Video";
-import VideoInfo from "./components/VideoInfo/VideoInfo";
-import VideoList from "./components/VideoList/VideoList";
-import CommentsContainer from "./components/CommentsContainer/CommentsContainer";
+import Video from "../../components/Video/Video";
+import VideoInfo from "../../components/VideoInfo/VideoInfo";
+import VideoList from "../../components/VideoList/VideoList";
+import CommentsContainer from "../../components/CommentsContainer/CommentsContainer";
 
 
 const VideoPage = () => {
+  const [video, setVideo] = useState(videosData[0]);
+
   return (
     <>
       <Video video={video} />

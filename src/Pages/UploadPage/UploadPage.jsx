@@ -1,13 +1,13 @@
-import './NEW.scss'
+import './UploadPage.scss'
 
-const NEW = () => {
+const UploadPage = () => {
 
   return (
 <>
-
+<p>this is the upload page!!!</p>
 </>
 
   )
 }
 
-export default NEW;
+export default UploadPage;
