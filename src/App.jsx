@@ -16,10 +16,20 @@ function App() {
   return (
     <>
       <Header />
-      <Video video = {video} />
-      <VideoInfo video = {video} />
-      < CommentsContainer video = {video}/>
-      <VideoList videosData = {videosData} setVideo = {setVideo} currentVideoId = {video.id}/>
+      <Video video={video} />
+      <div className="desktop-flex">
+        <div className="desktop-flex__left">
+          <VideoInfo video={video} />
+          <CommentsContainer video={video} />
+        </div>
+        <div className="desktop-flex__right">
+          <VideoList
+            videosData={videosData}
+            setVideo={setVideo}
+            currentVideoId={video.id}
+          />
+        </div>
+      </div>
     </>
   );
 }

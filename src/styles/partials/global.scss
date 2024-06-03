@@ -11,11 +11,16 @@ body {
 .divide-line {
   border-bottom: 0.125rem solid $alt-mid;
   width: 100%;
-  
-  // Hide line below video title outside mobile view.
-&--mobile {
-  @include tablet {
-    display: none;
+  &:last-child {
+    @include desktop {
+      display: none;
+    }
   }
-}
+  // Hide line below video title outside mobile view.
+
+  &--mobile {
+    @include tablet {
+      display: none;
+    }
+  }
 }

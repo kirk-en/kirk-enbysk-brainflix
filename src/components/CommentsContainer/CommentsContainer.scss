@@ -11,23 +11,17 @@
   @include tablet {
     padding-bottom: 1.5rem;
   }
-  &__title {
-    padding: 0 1rem;
-    color: $primary-dark;
-    font-size: 2rem;
-    font-weight: 600;
-    @include tablet {
-      margin: 3.5rem 0 2.25rem;
-      padding: 0 2.25rem;
-    }
-    @include desktop {
-      padding: 0 5rem;
-    }
+  // desktop gird element padding
+  @include desktop {
+    padding-right: 1.5rem;
   }
   &__posted-comment-container {
     padding: 1rem 0;
     @include tablet {
       padding: 1.5rem;
+    }
+    @include desktop {
+      padding: 1.5rem 1.5rem 1.5rem 0;
     }
   }
   &__flex {

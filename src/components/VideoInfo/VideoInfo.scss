@@ -29,6 +29,10 @@
       flex-direction: row;
       padding: 1rem 0;
     }
+    // desktop gird element padding
+    @include desktop {
+      padding-right: 1.5rem;
+    }
   }
   // styling to apply to each detail item (alignment).
   &__details-item {
@@ -41,7 +45,7 @@
     &:nth-child(even) {
       padding: 0 0 1rem;
       @include tablet {
-        padding: 0 0 0 2rem ;
+        padding: 0 0 0 2rem;
       }
     }
   }
@@ -63,6 +67,10 @@
     padding: 1rem 0;
     @include tablet {
       padding: 1.5rem 0;
+    }
+    // desktop gird element padding
+    @include desktop {
+      padding-right: 1.5rem;
     }
   }
   &__comment-count {
