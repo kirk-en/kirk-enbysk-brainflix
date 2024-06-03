@@ -5,7 +5,7 @@ const CommentsList = ({ video }) => {
   return (
     <>
       {video.comments.map((comment) => {
-        return <Comment key={comment.id} comment = {comment}/>;
+        return <Comment key={comment.id} comment={comment} />;
       })}
     </>
   );

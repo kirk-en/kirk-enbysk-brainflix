@@ -11,7 +11,7 @@ const VideoListItem = ({ vItem, setVideo }) => {
       <img
         className="list-item__img"
         src={vItem.image}
-        alt={`Thumbnail image for a vItem titled ${vItem.title} that was uploaded on ${new Date(vItem.timestamp).toLocaleDateString()}`}
+        alt={`Thumbnail image for a video titled ${vItem.title} that was uploaded on ${new Date(vItem.timestamp).toLocaleDateString()}`}
       />
       <article className="list-item__info">
         <p className="list-item__title">{vItem.title}</p>

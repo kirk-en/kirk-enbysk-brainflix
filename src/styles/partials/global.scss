@@ -11,13 +11,13 @@ body {
 .divide-line {
   border-bottom: 0.125rem solid $alt-mid;
   width: 100%;
+  // hide line after last comment in desktop view
   &:last-child {
     @include desktop {
       display: none;
     }
   }
   // Hide line below video title outside mobile view.
-
   &--mobile {
     @include tablet {
       display: none;
