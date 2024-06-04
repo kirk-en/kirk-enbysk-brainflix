@@ -44,7 +44,7 @@
   &__btn {
     @include btn-styling(1rem, 1rem);
     position: relative;
-    margin: 1.5rem 0;
+    margin: 1.5rem 0 0;
     text-align: center;
     @include tablet {
       width: 12rem;

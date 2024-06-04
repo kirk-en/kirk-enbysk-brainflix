@@ -1,13 +1,13 @@
-import './UploadPage.scss'
+import "./UploadPage.scss";
+import UploadForm from "../../components/UploadForm/UploadForm";
 
 const UploadPage = () => {
-
   return (
-<>
-<p>this is the upload page!!!</p>
-</>
-
-  )
-}
+    <>
+      <div className="divide-line"></div>
+      <UploadForm />
+    </>
+  );
+};
 
 export default UploadPage;

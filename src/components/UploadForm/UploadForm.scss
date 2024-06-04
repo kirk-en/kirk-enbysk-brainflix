@@ -1,0 +1,24 @@
+@use "../../styles/partials/variables.scss" as *;
+@use "../../styles/partials/mixins.scss" as *;
+
+
+.upload {
+  display: flex;
+  flex-direction: column;
+
+&__form {
+  display: flex;
+  flex-direction: column
+}
+&__field {
+  padding: .25rem 0 1rem;
+}
+
+  &__btn {
+    @include btn-styling(1rem, 1rem);
+    position: relative;
+  }
+  &__icon {
+    @include btn-icon;
+  }
+}
