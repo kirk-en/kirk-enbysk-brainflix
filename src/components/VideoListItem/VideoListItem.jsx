@@ -1,12 +1,8 @@
 import "./VideoListItem.scss";
 import { Link } from "react-router-dom";
 
-const VideoListItem = ({ vItem, setLoadedVideo }) => {
-  const clickHandler = (e, vItem) => {
-    // console.log(vItem);
-    console.log(vItem.id)
-    setLoadedVideo(vItem);
-  }
+const VideoListItem = ({ vItem }) => {
+
   return (
     <Link to={`/${vItem.id}`}>
       <li className="list-item">

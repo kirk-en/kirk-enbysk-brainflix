@@ -3,14 +3,14 @@ import CommentsField from "../CommentsField/CommentsField";
 import CommentsList from "../CommentsList/CommentsList";
 
 
-const CommentsContainer = ({ video }) => {
+const CommentsContainer = ({ loadedVideo }) => {
 
 
 
   return (
     <div className="comments-container">
       <CommentsField />
-      <CommentsList video={video} />
+      <CommentsList loadedVideo={loadedVideo} />
     </div>
   );
 };

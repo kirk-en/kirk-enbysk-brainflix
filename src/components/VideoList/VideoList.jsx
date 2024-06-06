@@ -3,7 +3,7 @@ import VideoListItem from "../VideoListItem/VideoListItem";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const VideoList = ({ setLoadedVideo, loadedVideo }) => {
+const VideoList = ({  loadedVideoId }) => {
 
   const [nextVideosList, setNextVideosList] = useState([]);
 
@@ -25,10 +25,9 @@ useEffect(() => {
         <ul className="video-list__list">
           {nextVideosList.map((vItem) => {
             return (
-              !(vItem.id == loadedVideo.id) && (
+              !(vItem.id == loadedVideoId) && (
                 <VideoListItem
                   vItem={vItem}
-                  setLoadedVideo={setLoadedVideo}
                   key={vItem.id}
                 />
               )

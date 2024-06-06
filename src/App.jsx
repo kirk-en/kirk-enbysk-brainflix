@@ -10,7 +10,7 @@ import UploadPage from "./Pages/UploadPage/UploadPage";
 // console.log(videosData);
 
 function App() {
-  const [video, setVideo] = useState(videosData[0]);
+  // const [video, setVideo] = useState(videosData[0]);
 
   return (
     <BrowserRouter>

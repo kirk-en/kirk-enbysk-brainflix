@@ -1,10 +1,10 @@
 import "./CommentsList.scss";
 import Comment from "../Comment/Comment";
 
-const CommentsList = ({ video }) => {
+const CommentsList = ({ loadedVideo }) => {
   return (
     <>
-      {video.comments.map((comment) => {
+      {loadedVideo.comments.map((comment) => {
         return <Comment key={comment.id} comment={comment} />;
       })}
     </>

@@ -10,11 +10,12 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 
 
+
 const VideoPage = () => {
   
   const { videoId } = useParams();
   
-  const [loadedVideo, setLoadedVideo] = useState('');
+  const [loadedVideo, setLoadedVideo] = useState({});
 
 
   const getLoadedVideoData = async () => {
@@ -30,16 +31,16 @@ const VideoPage = () => {
 
   return (
     <>
-      <Video loadedVideo={loadedVideo} />
+    <Video loadedVideo={loadedVideo} />
       <div className="desktop-flex">
         <div className="desktop-flex__left">
-          {/* <VideoInfo loadedVideo={loadedVideo} /> */}
+          {/* {loadedVideo !== {} && <VideoInfo loadedVideo={loadedVideo} />} */}
           {/* <CommentsContainer loadedVideo={loadedVideo} /> */}
         </div>
         <div className="desktop-flex__right">
           <VideoList
-            setLoadedVideo={setLoadedVideo}
-            loadedVideo={loadedVideo}
+            
+            loadedVideoId={loadedVideo.id}
           />
         </div>
       </div>
