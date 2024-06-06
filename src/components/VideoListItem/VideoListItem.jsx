@@ -4,7 +4,8 @@ const VideoListItem = ({ vItem, setVideo }) => {
   // build link handler here
   const clickHandler = (e, vItem) => {
     // console.log(vItem);
-    setVideo(vItem);
+    console.log(vItem.id)
+    setVideo(vItem.id);
   }
   return (
     <li className="list-item" onClick={(e) => clickHandler(e, vItem)}>
