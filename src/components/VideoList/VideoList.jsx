@@ -3,7 +3,7 @@ import VideoListItem from "../VideoListItem/VideoListItem";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const VideoList = ({  loadedVideoId }) => {
+const VideoList = ({ loadedVideoId }) => {
 
   const [nextVideosList, setNextVideosList] = useState([]);
 

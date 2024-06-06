@@ -7,8 +7,6 @@ import Header from "./components/Header/Header";
 import VideoPage from "./Pages/VideoPage/VideoPage";
 import UploadPage from "./Pages/UploadPage/UploadPage";
 
-// console.log(videosData);
-
 function App() {
   // const [video, setVideo] = useState(videosData[0]);
 

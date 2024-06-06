@@ -15,7 +15,7 @@ const VideoPage = () => {
   
   const { videoId } = useParams();
   
-  const [loadedVideo, setLoadedVideo] = useState({});
+  const [loadedVideo, setLoadedVideo] = useState();
 
 
   const getLoadedVideoData = async () => {
@@ -24,9 +24,14 @@ const VideoPage = () => {
     setLoadedVideo(response.data);
   }
 
+
   useEffect (() => {
     getLoadedVideoData()
   }, [videoId])
+
+if (!loadedVideo) {
+  return <p>loading...</p>
+}
 
 
   return (
@@ -34,8 +39,8 @@ const VideoPage = () => {
     <Video loadedVideo={loadedVideo} />
       <div className="desktop-flex">
         <div className="desktop-flex__left">
-          {/* {loadedVideo !== {} && <VideoInfo loadedVideo={loadedVideo} />} */}
-          {/* <CommentsContainer loadedVideo={loadedVideo} /> */}
+          <VideoInfo loadedVideo={loadedVideo} />
+          <CommentsContainer loadedVideo={loadedVideo} />
         </div>
         <div className="desktop-flex__right">
           <VideoList
