@@ -1,13 +1,13 @@
 // import poster from '../../assets/images/Upload-video-preview.jpg'
 import "./Video.scss";
 
-const Video = ({ video }) => {
+const Video = ({ loadedVideo }) => {
   return (
     <>
       <video
         controls
-        src={`${video.video}?api_key=newKey`}
-        poster={video.image}
+        src={`${loadedVideo.video}?api_key=newKey`}
+        poster={loadedVideo.image}
         className="video"
       ></video>
     </>

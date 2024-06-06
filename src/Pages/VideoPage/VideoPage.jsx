@@ -1,29 +1,45 @@
 import "./VideoPage.scss";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import videosData from "../../data/video-details.json";
 
 import Video from "../../components/Video/Video";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
 import VideoList from "../../components/VideoList/VideoList";
 import CommentsContainer from "../../components/CommentsContainer/CommentsContainer";
+import axios from "axios";
+import { useParams } from "react-router-dom";
 
 
 const VideoPage = () => {
-  const [video, setVideo] = useState(videosData[0]);
+  
+  const { videoId } = useParams();
+  
+  const [loadedVideo, setLoadedVideo] = useState('');
+
+
+  const getLoadedVideoData = async () => {
+    const response = await axios.get(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${videoId ? videoId : `84e96018-4022-434e-80bf-000ce4cd12b8`}?api_key=kirk100`);
+    console.log(response.data);
+    setLoadedVideo(response.data);
+  }
+
+  useEffect (() => {
+    getLoadedVideoData()
+  }, [])
+
 
   return (
     <>
-      <Video video={video} />
+      <Video loadedVideo={loadedVideo} />
       <div className="desktop-flex">
         <div className="desktop-flex__left">
-          <VideoInfo video={video} />
-          <CommentsContainer video={video} />
+          {/* <VideoInfo loadedVideo={loadedVideo} /> */}
+          {/* <CommentsContainer loadedVideo={loadedVideo} /> */}
         </div>
         <div className="desktop-flex__right">
           <VideoList
-            videosData={videosData}
-            setVideo={setVideo}
-            currentVideoId={video.id}
+            setLoadedVideo={setLoadedVideo}
+            loadedVideo={loadedVideo}
           />
         </div>
       </div>
