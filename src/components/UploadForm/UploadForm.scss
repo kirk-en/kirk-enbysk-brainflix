@@ -6,6 +6,9 @@
   display: flex;
   flex-direction: column;
   @include section-padding;
+  @include desktop {
+    padding: 0 3.5rem;
+  }
 
 &__form {
   display: flex;
