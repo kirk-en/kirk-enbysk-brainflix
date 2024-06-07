@@ -3,19 +3,6 @@
 
 .vid-info {
   @include section-padding;
-  &__title {
-    font-size: 1.5rem;
-    line-height: 2rem;
-    font-weight: 700;
-    padding: 1.5rem 0 1rem;
-    @include tablet {
-      font-size: 2rem;
-      padding: 2.25rem 0 1.5rem;
-    }
-    @include desktop {
-      padding-bottom: 0rem;
-    }
-  }
   &__details {
     display: flex;
     justify-content: space-between;

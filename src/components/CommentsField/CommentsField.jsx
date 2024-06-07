@@ -16,7 +16,7 @@ const CommentsField = () => {
             <label className="comments__label">
               <span className="comments__text">join the conversation</span>
               <textarea
-                className="comments__field comments__field--no-resize"
+                className="text-input-field"
                 name="comment"
                 placeholder="Add a new comment"
                 required

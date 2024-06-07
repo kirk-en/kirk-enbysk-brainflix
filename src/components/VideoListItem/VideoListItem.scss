@@ -25,6 +25,14 @@
     }
   }
   &__title {
-    font-weight: 600;
+    font-style: none;
+    
+    &--bold {
+      font-weight: 600;
+    }
   }
+}
+.link {
+  text-decoration: none;
+  color: $primary-dark;
 }

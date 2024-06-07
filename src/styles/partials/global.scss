@@ -7,6 +7,41 @@ body {
   font-family: Avenir-local, Arial, Helvetica, sans-serif;
 }
 
+.main-title {
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+  padding: 1.5rem 0 1rem;
+  @include tablet {
+    font-size: 2rem;
+    padding: 2.25rem 0 1.5rem;
+  }
+  @include desktop {
+    padding-bottom: 0rem;
+  }
+}
+
+.text-input-field {
+  @include input-styling(100%, 0.25rem);
+  display: block;
+  resize: none;
+  height: 6rem;
+  color: $primary-dark;
+  @include tablet {
+    height: 3.25rem;
+    overflow: hidden;
+  }
+  &--fixed-small {
+    height: 3.25rem;
+  }
+  &:focus {
+    border: 1px solid $primary-dark;
+  }
+  &:user-invalid {
+    border: 1px solid $error-color;
+  }
+}
+
 // divide lines
 .divide-line {
   border-bottom: 1px solid $alt-mid;

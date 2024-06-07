@@ -2,7 +2,7 @@
 @use "../../styles/partials/mixins.scss" as *;
 
 .header {
-  margin: 1.5rem 0;
+  margin: 1.5rem 0 1rem;
   @include section-padding;
   @include tablet {
     display: flex;
@@ -37,6 +37,8 @@
     width: $profile-img-size;
     height: $profile-img-size;
     margin-left: 1rem;
+    object-fit: cover;
+    object-position: 25%;
     @include tablet {
       order: 4;
     }
