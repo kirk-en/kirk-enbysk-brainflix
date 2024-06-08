@@ -14,12 +14,16 @@ const VideoPage = () => {
   const [loadedVideo, setLoadedVideo] = useState();
 
   const getLoadedVideoData = async () => {
-    const response = await axios.get(
-      `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${
-        videoId ? videoId : `84e96018-4022-434e-80bf-000ce4cd12b8`
-      }?api_key=kirk100`
-    );
-    setLoadedVideo(response.data);
+    try {
+      const response = await axios.get(
+        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${
+          videoId ? videoId : `84e96018-4022-434e-80bf-000ce4cd12b8`
+        }?api_key=kirk100`
+      );
+      setLoadedVideo(response.data);
+    } catch (e) {
+      console.log(e);
+    }
   };
 
   useEffect(() => {

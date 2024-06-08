@@ -4,19 +4,22 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 
 const VideoList = ({ loadedVideoId }) => {
-
   const [nextVideosList, setNextVideosList] = useState([]);
 
-
   const getVideoList = async () => {
-    const response = await axios(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk100`);
-    // console.log('This is from the api', response.data)
-    setNextVideosList(response.data)
-  }
-useEffect(() => {
-  getVideoList();
-}, [])
-
+    try {
+      const response = await axios(
+        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk100`
+      );
+      // console.log('This is from the api', response.data)
+      setNextVideosList(response.data);
+    } catch (e) {
+      console.log(e);
+    }
+  };
+  useEffect(() => {
+    getVideoList();
+  }, []);
 
   return (
     <>
@@ -26,10 +29,7 @@ useEffect(() => {
           {nextVideosList.map((vItem) => {
             return (
               !(vItem.id == loadedVideoId) && (
-                <VideoListItem
-                  vItem={vItem}
-                  key={vItem.id}
-                />
+                <VideoListItem vItem={vItem} key={vItem.id} />
               )
             );
           })}
