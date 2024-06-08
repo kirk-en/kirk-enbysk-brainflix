@@ -1,6 +1,5 @@
 import "./VideoPage.scss";
 import { useEffect, useState } from "react";
-import videosData from "../../data/video-details.json";
 
 import Video from "../../components/Video/Video";
 import VideoInfo from "../../components/VideoInfo/VideoInfo";
