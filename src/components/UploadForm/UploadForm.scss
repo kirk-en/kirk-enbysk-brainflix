@@ -1,7 +1,6 @@
 @use "../../styles/partials/variables.scss" as *;
 @use "../../styles/partials/mixins.scss" as *;
 
-
 .upload {
   display: flex;
   flex-direction: column;
@@ -10,20 +9,88 @@
     padding: 0 3.5rem;
   }
 
-&__form {
-  display: flex;
-  flex-direction: column
-}
-&__subtitle {
-  padding: 1rem 0 .25rem;
-  text-transform: uppercase;
-  font-weight: 600;
-  color: $primary-mid;
-}
+  &__form {
+    display: flex;
+    flex-direction: column;
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+  &__title {
+    @include tablet {
+      padding: 2.25rem 0 2.25rem;
+    }
+  }
+  &__subtitle {
+    padding: 1rem 0 0.25rem;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: $primary-mid;
+    @include desktop {
+      padding-top: 2.5rem;
+    }
+    &--top-gap {
+      @include tablet {
+        padding-top: 2.5rem;
+      }
+    }
+  }
+  &__image {
+    width: 100%;
+    @include tablet {
+      width: 40%;
+    }
+    @include desktop {
+      width: 100%;
+    }
+  }
+  &__thumbnail-container {
+    @include desktop {
+      width: 30%;
+    }
+  }
+  &__text-areas-container {
+    @include desktop {
+      flex-grow: 1;
+      margin-left: 2rem;
+    }
+  }
+  &__buttons-container {
+    display: flex;
+    flex-direction: column;
+    @include tablet {
+      flex-direction: row;
+      justify-content: flex-end;
+    }
+    @include desktop {
+      width: calc(100vw - 7rem);
+    }
+  }
   &__btn {
     @include btn-styling(1rem, 1rem);
     position: relative;
     margin: 2rem 0;
+    @include tablet {
+      width: 20%;
+    }
+    &--cancel {
+      display: flex;
+      justify-content: center;
+      background-color: transparent;
+      color: $primary-color;
+      font-weight: 600;
+      margin: 0;
+      width: 25%;
+      align-self: center;
+      &:hover {
+        background-color: $alt-light;
+      }
+      @include tablet {
+        order: -1;
+        width: 20%;
+      }
+    }
   }
   &__icon {
     @include btn-icon;

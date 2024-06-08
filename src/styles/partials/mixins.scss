@@ -33,6 +33,7 @@
   border-radius: 8px;
   padding: $padding;
   border: none;
+  transition: background-color .5s;
   &:hover {
     background-color: $alt-color;
   }
