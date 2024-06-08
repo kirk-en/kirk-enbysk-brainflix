@@ -22,7 +22,7 @@
     }
   }
   // Set profile image size here to scale together with search bar.
-  $profile-img-size: 3.25rem;
+  $profile-img-size: 3.5rem;
   &__input {
     background: url(../../assets/icons/search.svg) no-repeat 0.5rem 0.75rem;
     background-size: 1.25rem;
@@ -30,6 +30,11 @@
     @include tablet {
       background-position: 0.5rem 1rem;
       @include input-styling(50%, 1.5rem);
+    }
+    // modifier to prevent long search query from running over icon
+    &--search {
+      padding-left: 2.5rem;
+      text-indent: 0;
     }
   }
   &__profile-image {

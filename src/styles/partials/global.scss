@@ -28,20 +28,20 @@ body {
   height: 6rem;
   color: $primary-dark;
   @include tablet {
-    height: 3.25rem;
-    overflow: hidden;
+    height: 3.5rem;
+    // overflow: hidden;
   }
   &--fixed-small {
-    height: 3.25rem;
+    height: 3.5rem;
   }
   &--multi-line {
     height: 6rem;
-    // scroll-behavior: auto;
+    scroll-behavior: auto;
     @include tablet {
       margin-bottom: 2rem;
     }
     @include desktop {
-      // height: auto;
+      height: auto;
     }
   }
   &:focus {

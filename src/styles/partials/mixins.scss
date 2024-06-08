@@ -53,7 +53,7 @@
 @mixin input-styling($width, $indent) {
   border-radius: 0.25rem;
   width: $width;
-  min-height: 2.25rem;
+  // min-height: 2.25rem;
   font-family: Avenir-local, Arial, Helvetica, sans-serif;
   border: 1px solid $alt-mid;
   background-color: $alt-light;
