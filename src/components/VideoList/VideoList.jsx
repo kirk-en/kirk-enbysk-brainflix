@@ -11,7 +11,6 @@ const VideoList = ({ loadedVideoId }) => {
       const response = await axios(
         `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk100`
       );
-      // console.log('This is from the api', response.data)
       setNextVideosList(response.data);
     } catch (e) {
       console.log(e);

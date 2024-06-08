@@ -1,6 +1,5 @@
 @use "../../styles/partials/variables.scss" as *;
 
-
 @mixin tablet {
   @media (min-width: 768px) {
     @content;
@@ -33,7 +32,7 @@
   border-radius: 8px;
   padding: $padding;
   border: none;
-  transition: background-color .5s;
+  transition: background-color 0.5s;
   &:hover {
     background-color: $alt-color;
   }
@@ -41,25 +40,24 @@
 @mixin btn-icon {
   position: absolute;
   left: 1rem;
-  top: .75rem;
+  top: 0.75rem;
   width: 2rem;
   @include tablet {
     width: 1.5rem;
-    top: .85rem;
-    left: .5rem;
+    top: 0.85rem;
+    left: 0.5rem;
   }
 }
 
 @mixin input-styling($width, $indent) {
   border-radius: 0.25rem;
   width: $width;
-  // min-height: 2.25rem;
   font-family: Avenir-local, Arial, Helvetica, sans-serif;
   border: 1px solid $alt-mid;
   background-color: $alt-light;
   font-size: 1rem;
   text-indent: $indent;
-  padding: .75rem;
+  padding: 0.75rem;
   @include tablet {
     padding: 1rem;
   }

@@ -1,4 +1,3 @@
-// import poster from '../../assets/images/Upload-video-preview.jpg'
 import "./Video.scss";
 
 const Video = ({ loadedVideo }) => {

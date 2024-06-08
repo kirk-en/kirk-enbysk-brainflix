@@ -29,7 +29,6 @@ body {
   color: $primary-dark;
   @include tablet {
     height: 3.5rem;
-    // overflow: hidden;
   }
   &--fixed-small {
     height: 3.5rem;

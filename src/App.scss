@@ -10,9 +10,9 @@
   }
   &__left {
     @include desktop {
-    width: 70%;
-    padding: 0 0 0 3.5rem;
-    border-right: solid 1px $alt-mid;
+      width: 70%;
+      padding: 0 0 0 3.5rem;
+      border-right: solid 1px $alt-mid;
     }
   }
   &__right {

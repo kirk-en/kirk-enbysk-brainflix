@@ -8,8 +8,6 @@ import VideoPage from "./Pages/VideoPage/VideoPage";
 import UploadPage from "./Pages/UploadPage/UploadPage";
 
 function App() {
-  // const [video, setVideo] = useState(videosData[0]);
-
   return (
     <BrowserRouter>
       <Header />
