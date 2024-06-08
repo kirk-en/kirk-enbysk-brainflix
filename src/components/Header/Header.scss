@@ -26,6 +26,7 @@
   &__input {
     background: url(../../assets/icons/search.svg) no-repeat 0.5rem 0.75rem;
     background-size: 1.25rem;
+
     @include input-styling(calc(100% - ($profile-img-size + 1rem)), 1.5rem);
     @include tablet {
       background-position: 0.5rem 1rem;
@@ -35,6 +36,10 @@
     &--search {
       padding-left: 2.5rem;
       text-indent: 0;
+    }
+    &::placeholder {
+      color: $primary-dark;
+      opacity: 1;
     }
   }
   &__profile-image {

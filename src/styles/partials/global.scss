@@ -50,6 +50,10 @@ body {
   &:user-invalid {
     border: 1px solid $error-color;
   }
+  &::placeholder {
+    color: $primary-dark;
+    opacity: 1;
+  }
 }
 
 // divide lines
