@@ -19,7 +19,6 @@ const VideoPage = () => {
         videoId ? videoId : `84e96018-4022-434e-80bf-000ce4cd12b8`
       }?api_key=kirk100`
     );
-    console.log("video changed to " + response.data.title);
     setLoadedVideo(response.data);
   };
 
@@ -32,7 +31,7 @@ const VideoPage = () => {
   }
 
   return (
-    <>
+    <main>
       <Video loadedVideo={loadedVideo} />
       <div className="desktop-flex">
         <div className="desktop-flex__left">
@@ -43,7 +42,7 @@ const VideoPage = () => {
           <VideoList loadedVideoId={loadedVideo.id} />
         </div>
       </div>
-    </>
+    </main>
   );
 };
 

@@ -3,7 +3,7 @@ import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
 const VideoInfo = ({ loadedVideo }) => {
-  console.log(loadedVideo)
+
   return (
     <section className="vid-info">
       <h1 className="main-title">{loadedVideo.title}</h1>
