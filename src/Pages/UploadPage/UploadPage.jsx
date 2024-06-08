@@ -5,24 +5,24 @@ import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 const UploadPage = () => {
+  const navigate = useNavigate();
+  const [title, setTitle] = useState("");
+  const [description, setDescription] = useState("");
 
-const navigate = useNavigate();
-const [title, setTitle] = useState('');
-const [description, setDescription] = useState('')
+  // Event listeners for each form field
+  const handleTitleChange = (event) => {
+    setTitle(event.target.value);
+  };
+  const handleDescriptionChange = (event) => {
+    setDescription(event.target.value);
+  };
 
-const handleTitleChange = (event) => {
-  setTitle(event.target.value);
-}
-const handleDescriptionChange = (event) => {
-  setDescription(event.target.value);
-}
-
-const handleFormSubmit = (event) => {
-  event.preventDefault();
-  console.log(title, description);
-  alert(`Your Video ${title}, has been uploaded. Congratulations 🎉`);
-  navigate('/')
-}
+  // Run when form is submitted
+  const handleFormSubmit = (event) => {
+    event.preventDefault();
+    alert(`Your Video, ${title}, has been uploaded. Congratulations 🎉`);
+    navigate("/");
+  };
 
   return (
     <>
