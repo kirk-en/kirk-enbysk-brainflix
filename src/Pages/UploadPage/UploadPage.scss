@@ -45,12 +45,13 @@
       width: 40%;
     }
     @include desktop {
-      width: 100%;
+      width: auto;
+      max-height: 13rem;
     }
   }
   &__thumbnail-container {
     @include desktop {
-      width: 30%;
+      min-width: 30%;
     }
   }
   &__text-areas-container {
@@ -92,6 +93,7 @@
       @include tablet {
         order: -1;
         width: 20%;
+        margin-right: 1rem
       }
     }
   }
