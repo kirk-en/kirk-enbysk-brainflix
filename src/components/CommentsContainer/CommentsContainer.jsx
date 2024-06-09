@@ -14,7 +14,7 @@ const CommentsContainer = ({ loadedVideo }) => {
 
   const postComment = async (comment) => {
     try {
-      const response = await axios.post(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${loadedVideo.id}/comments?api_key=kirk100`, {name: 'Kirk', comment: `Wow great!${Math.random()}`});
+      const response = await axios.post(`https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${loadedVideo.id}/comments?api_key=kirk101`, {name: 'Kirk', comment: `Wow great!${Math.random()}`});
       console.log(response);
     } catch (error) {
       console.log(error);

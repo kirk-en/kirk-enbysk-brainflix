@@ -9,7 +9,7 @@ const VideoList = ({ loadedVideoId }) => {
   const getVideoList = async () => {
     try {
       const response = await axios(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk100`
+        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk101`
       );
       setNextVideosList(response.data);
     } catch (e) {
