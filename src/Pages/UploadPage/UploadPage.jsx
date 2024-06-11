@@ -3,6 +3,10 @@ import icon from "../../assets/icons/publish.svg";
 import "./UploadPage.scss";
 import { Link, useNavigate } from "react-router-dom";
 import { useState } from "react";
+import axios from "axios";
+
+
+const API = import.meta.env.VITE_API_URL;
 
 const UploadPage = () => {
   const navigate = useNavigate();
@@ -17,9 +21,24 @@ const UploadPage = () => {
     setDescription(event.target.value);
   };
 
+  // API POST request to "upload" new video
+  const uploadVideo = async (obj) => {
+    try {
+      await axios.post(`${API}/videos?api_key=kirk100`, obj);
+      console.log('video uploaded via form!');
+    } catch (error) {
+      console.log(error);
+    }
+  };
+
   // Run when form is submitted
   const handleFormSubmit = (event) => {
     event.preventDefault();
+    const uploadObj = {
+      title: title,
+      description: description,
+    }
+    uploadVideo(uploadObj);
     alert(`Your Video, ${title}, has been uploaded. Congratulations 🎉`);
     navigate("/");
   };

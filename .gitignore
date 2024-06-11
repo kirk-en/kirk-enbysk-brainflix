@@ -27,3 +27,4 @@ reference
 *.css
 *.map
 _NewComponent
+.env

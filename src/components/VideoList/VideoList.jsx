@@ -3,13 +3,15 @@ import VideoListItem from "../VideoListItem/VideoListItem";
 import axios from "axios";
 import { useEffect, useState } from "react";
 
-const VideoList = ({ loadedVideoId }) => {
+const VideoList = ({ loadedVideoId, API }) => {
+  // console.log(API);
+
   const [nextVideosList, setNextVideosList] = useState([]);
 
   const getVideoList = async () => {
     try {
       const response = await axios(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos?api_key=kirk100`
+        `${API}/videos?api_key=kirk100`
       );
       setNextVideosList(response.data);
     } catch (e) {

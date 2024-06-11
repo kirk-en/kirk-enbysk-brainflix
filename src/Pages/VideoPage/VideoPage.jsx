@@ -9,11 +9,11 @@ import axios from "axios";
 import { useParams } from "react-router-dom";
 // import 'dotenv/config';
 
-const apiUrl = import.meta.env.VITE_API_URL;
+const API = import.meta.env.VITE_API_URL;
 
 const VideoPage = () => {
-  console.log(apiUrl);
-  
+  // console.log(API);
+
   const { videoId } = useParams();
 
   const [loadedVideo, setLoadedVideo] = useState();
@@ -21,7 +21,7 @@ const VideoPage = () => {
   const getLoadedVideoData = async () => {
     try {
       const response = await axios.get(
-        `https://unit-3-project-api-0a5620414506.herokuapp.com/videos/${
+        `${API}/videos/${
           videoId ? videoId : `84e96018-4022-434e-80bf-000ce4cd12b8`
         }?api_key=kirk100`
       );
@@ -48,7 +48,7 @@ const VideoPage = () => {
           <CommentsContainer loadedVideo={loadedVideo} />
         </div>
         <div className="desktop-flex__right">
-          <VideoList loadedVideoId={loadedVideo.id} />
+          <VideoList loadedVideoId={loadedVideo.id} API={API} />
         </div>
       </div>
     </main>
