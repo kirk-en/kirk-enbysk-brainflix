@@ -1,12 +1,12 @@
 import "./Video.scss";
 
-const Video = ({ loadedVideo }) => {
+const Video = ({ loadedVideo, API }) => {
   return (
     <>
       <video
         controls
-        src={`${loadedVideo.video}?api_key=newKey`}
-        poster={loadedVideo.image}
+        src={`${API}${loadedVideo.video}`}
+        poster={`${API}${loadedVideo.image}`}
         className="video"
       ></video>
     </>

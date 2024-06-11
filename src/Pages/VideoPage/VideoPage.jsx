@@ -41,7 +41,7 @@ const VideoPage = () => {
 
   return (
     <main>
-      <Video loadedVideo={loadedVideo} />
+      <Video loadedVideo={loadedVideo} API={API} />
       <div className="desktop-flex">
         <div className="desktop-flex__left">
           <VideoInfo loadedVideo={loadedVideo} />

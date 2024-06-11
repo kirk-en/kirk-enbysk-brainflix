@@ -30,7 +30,7 @@ const VideoList = ({ loadedVideoId, API }) => {
           {nextVideosList.map((vItem) => {
             return (
               !(vItem.id == loadedVideoId) && (
-                <VideoListItem vItem={vItem} key={vItem.id} />
+                <VideoListItem vItem={vItem} key={vItem.id} API={API}/>
               )
             );
           })}

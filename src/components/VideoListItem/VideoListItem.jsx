@@ -1,13 +1,13 @@
 import "./VideoListItem.scss";
 import { Link } from "react-router-dom";
 
-const VideoListItem = ({ vItem }) => {
+const VideoListItem = ({ vItem, API }) => {
   return (
     <Link to={`/${vItem.id}`} className="link">
       <li className="list-item">
         <img
           className="list-item__img"
-          src={vItem.image}
+          src={`${API}${vItem.image}`}
           alt={`Thumbnail image for a video titled ${
             vItem.title
           } that was uploaded on ${new Date(
