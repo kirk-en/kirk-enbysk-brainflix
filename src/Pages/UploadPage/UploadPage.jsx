@@ -37,6 +37,7 @@ const UploadPage = () => {
     const uploadObj = {
       title: title,
       description: description,
+      image: '/images/upload-image.jpg',
     }
     uploadVideo(uploadObj);
     alert(`Your Video, ${title}, has been uploaded. Congratulations 🎉`);

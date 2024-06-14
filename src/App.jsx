@@ -4,8 +4,8 @@ import "./App.scss";
 import videosData from "./data/video-details.json";
 
 import Header from "./components/Header/Header";
-import VideoPage from "./Pages/VideoPage/VideoPage";
-import UploadPage from "./Pages/UploadPage/UploadPage";
+import VideoPage from "./pages/VideoPage/VideoPage";
+import UploadPage from "./pages/UploadPage/UploadPage";
 
 function App() {
   return (
