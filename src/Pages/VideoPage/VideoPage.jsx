@@ -7,15 +7,13 @@ import VideoList from "../../components/VideoList/VideoList";
 import CommentsContainer from "../../components/CommentsContainer/CommentsContainer";
 import axios from "axios";
 import { useParams } from "react-router-dom";
-// import 'dotenv/config';
 
 const API = import.meta.env.VITE_API_URL;
 
 const VideoPage = () => {
-  // console.log(API);
 
   const { videoId } = useParams();
-
+  
   const [loadedVideo, setLoadedVideo] = useState();
 
   const getLoadedVideoData = async () => {

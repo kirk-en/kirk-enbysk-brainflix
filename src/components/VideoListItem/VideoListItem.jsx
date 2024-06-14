@@ -3,12 +3,12 @@ import { Link } from "react-router-dom";
 
 const VideoListItem = ({ vItem, API }) => {
   return (
-    <Link to={`/${vItem.id}`} className="link">
+    <Link to={`/videos/${vItem.id}`} className="link">
       <li className="list-item">
         <img
           className="list-item__img"
           src={`${API}${vItem.image}`}
-          alt={`Thumbnail image for a video titled ${
+          alt={`Thumbnail for a video titled ${
             vItem.title
           } that was uploaded on ${new Date(
             vItem.timestamp

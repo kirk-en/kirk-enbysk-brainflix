@@ -9,7 +9,7 @@ const Header = () => {
     <header className="header">
       <figure className="header__logo-container">
         <Link to="/">
-          <img className="header__logo" src={logo} alt="brainflix logo" />
+          <img className="header__logo" src={logo} alt="a blue play button next and the words brainflix" />
         </Link>
       </figure>
       <section className="header__right-controls">
@@ -21,10 +21,10 @@ const Header = () => {
         <img
           className="header__profile-image"
           src={profileImage}
-          alt="user profile image"
+          alt="brainflix user avatar"
         />
         <Link to="/upload" className="header__btn">
-          <img className="header__icon" src={icon} alt="search bar icon" />
+          <img className="header__icon" src={icon} alt="magnifying glass" />
           Upload
         </Link>
       </section>

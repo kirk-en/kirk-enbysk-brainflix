@@ -57,7 +57,7 @@ const UploadPage = () => {
             </p>
             <img
               src={thumbnail}
-              alt="Uploaded video thumbnail"
+              alt="poster image for a uploaded video"
               className="upload__image"
             />
           </div>
@@ -93,7 +93,7 @@ const UploadPage = () => {
               <img
                 className="upload__icon"
                 src={icon}
-                alt="publish video icon"
+                alt="upward pointed arrow"
               />
               <span>publish</span>
             </button>

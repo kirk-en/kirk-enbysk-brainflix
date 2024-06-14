@@ -40,6 +40,8 @@
     border-radius: 50%;
     background-color: $alt-mid;
     color: transparent;
+    object-fit: cover;
+    object-position: 25%;
     &--posted {
       margin: 0;
       flex-shrink: 0;

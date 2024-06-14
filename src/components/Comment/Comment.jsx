@@ -5,11 +5,7 @@ const Comment = ({ comment }) => {
     <>
       <section className="comments__posted-comment-container">
         <div className="comments__flex">
-          <img
-            className="comments__profile-image comments__profile-image--posted"
-            src="./assets/images/Mohan-muruge.jpg"
-            alt="profile picture"
-          />
+          <div className="comments__profile-image comments__profile-image--posted" />
           <div className="comments__content-container">
             <div className="comments__flex comments__flex--post-info">
               <span className="comments__name">{comment.name}</span>

@@ -19,13 +19,13 @@ const VideoInfo = ({ loadedVideo }) => {
 
         <article className="vid-info__details-group vid-info__details-group--right">
           <div className="vid-info__count-container vid-info__details-item">
-            <img className="vid-info__icon" src={viewsIcon} alt="eye icon" />
+            <img className="vid-info__icon" src={viewsIcon} alt="simple eyeball illustration" />
             <span className="vid-info__subtitle vid-info__subtitle--w-icon">
               {loadedVideo.views}
             </span>
           </div>
           <div className="vid-info__count-container vid-info__details-item">
-            <img className="vid-info__icon" src={likesIcon} alt="heart icon" />
+            <img className="vid-info__icon" src={likesIcon} alt="simple heart illustration" />
             <span className="vid-info__subtitle vid-info__subtitle--w-icon">
               {loadedVideo.likes}
             </span>

@@ -1,12 +1,14 @@
 import "./CommentsContainer.scss";
 import CommentsField from "../CommentsField/CommentsField";
-import CommentsList from "../CommentsList/CommentsList";
+import Comment from "../Comment/Comment";
 
 const CommentsContainer = ({ loadedVideo }) => {
   return (
     <div className="comments-container">
       <CommentsField />
-      <CommentsList loadedVideo={loadedVideo} />
+      {loadedVideo.comments.map((comment) => {
+        return <Comment key={comment.id} comment={comment} />;
+      })}
     </div>
   );
 };
