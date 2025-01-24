@@ -1,5 +1,6 @@
 # Brainflix Frontend
 ![Brainflix logo](https://raw.githubusercontent.com/kirk-en/kirk-enbysk-brainflix/0b614d82f85bf281e6741bba669bd39cf70c5a36/src/assets/logo/BrainFlix-logo.svg)
+
 A prototype video streaming platform frontend built using React. This app interacts with a custom-built API to manage video data, including video details, comments, and related videos. The app enables users to view, comment, and upload videos.
 
 ## Project Overview
